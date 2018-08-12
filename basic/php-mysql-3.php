@@ -6,7 +6,9 @@
 
     #$row = mysqli_fetch_assoc($result);
     #echo $row["id"].$row["name"].$row["phone"].$row["mail"];
-
+    session_start();
+    // session_unset();
+    echo $_SESSION["name"];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -43,7 +45,7 @@
         <?php
             }
         ?>
-            <input type="submit" value="刪除">
+            <input type="submit" value="刪除" onclick="return confirm('確認刪除？')">
         </form>
    </table>
 </body>

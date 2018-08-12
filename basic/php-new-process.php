@@ -6,6 +6,6 @@
     $mail = $_POST["mail"];
     $sql = "INSERT INTO `students`(name,phone,mail)VALUES('$name','$phone','$mail')";
     mysqli_query($conn,$sql);
-    header("Location:php-mysql-2.php");
+    header("Location:php-mysql-3.php");
     // header("Refresh:5;url=php-mysql-1.php");
 ?>
