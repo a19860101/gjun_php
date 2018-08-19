@@ -4,7 +4,7 @@
     $id = $_GET["id"];
     $name = $_GET["name"];
     // $sql = "SELECT * FROM `gallery` WHERE id = $id";
-    // $reuslt = mysqli_query($conn,$sql);
+    // $result = mysqli_query($conn,$sql);
     // $row = mysqli_fetch_assoc($result);
     // echo $row["name"];
     unlink("images/".$name);
