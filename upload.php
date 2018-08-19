@@ -31,7 +31,7 @@
         // echo "empty";
         $up = 3;
     }
-    if(file_exists(basename("images/".$pic_name))){
+    if(file_exists($target)){
         $up = 4;
     }
     if(isset($up)){
