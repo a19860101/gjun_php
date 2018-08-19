@@ -20,19 +20,16 @@
     $sql = "INSERT INTO `gallery`(name)VALUES('$pic_name')";
 
     if($pic_name_ext!="jpg" && $pic_name_ext!="png" && $pic_name_ext!="gif" && $pic_name_ext!="jpeg"){
-        // echo "error";
         $up = 1;
     }
     if($pic_size > $max_size) {
-        // echo "檔案過大，須小於3MB";
         $up = 2;
-    }
-    if($error==4){
-        // echo "empty";
-        $up = 3;
     }
     if(file_exists($target)){
         $up = 4;
+    }
+    if($error==4){
+        $up = 3;
     }
     if(isset($up)){
         switch($up){
