@@ -22,6 +22,7 @@
                 <p><?php echo $row["content"];?></p>
                 <div><?php echo $row["date"];?></div>
                 <a href="javascript:;" id="<?php echo $row["id"]; ?>" class="del">刪除</a>
+                <a href="edit.php?id=<?php echo $row["id"];?>">編輯</a>
             </div>
         <?php } ?>
     </div>
