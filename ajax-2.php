@@ -26,25 +26,27 @@
         $(document).ready(function(){
             $.ajax({
                 url: "https://data.taipei/opendata/datalist/apiAccess?scope=resourceAquire&rid=bf073841-c734-49bf-a97f-3757a6013812",
+                // url: "https://data.taipei/opendata/datalist/apiAccess?scope=resourceAquire&rid=24c9f8fe-88db-4a6e-895c-498fbc94df94",
                 success:function(e){
+                    console.log(e);
                     // console.log(e.result.results[0].ParkName);
-                    $(e.result.results).each(function(){
-                        console.log(this.ParkName);
-                        console.log(this.Name);
-                        let ParkName = this.ParkName;
-                        let OpenTime = this.OpenTime;
-                        let Name = this.Name;
-                        let Image = this.Image;
-                        let content = `
-                        <div class="box">
-                            <h3>${ParkName}</h3>
-                            <div>${OpenTime}</div>
-                            <div>${Name}</div>
-                            <div class="img"><img src="${Image}"></div>
-                        </div>
-                        `
-                        $("#output").append(content);
-                    })
+                    // $(e.result.results).each(function(){
+                    //     console.log(this.ParkName);
+                    //     console.log(this.Name);
+                    //     let ParkName = this.ParkName;
+                    //     let OpenTime = this.OpenTime;
+                    //     let Name = this.Name;
+                    //     let Image = this.Image;
+                    //     let content = `
+                    //     <div class="box"> 
+                    //         <h3>${ParkName}</h3>
+                    //         <div>${OpenTime}</div>
+                    //         <div>${Name}</div>
+                    //         <div class="img"><img src="${Image}"></div>
+                    //     </div>
+                    //     `
+                    //     $("#output").append(content);
+                    // })
                 },
                 error: function(){
 
