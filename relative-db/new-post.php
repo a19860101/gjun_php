@@ -15,7 +15,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="">
+    <form action="new-post-ok.php" method="post">
         <input type="text" name="title">
         <textarea name="content" id="" cols="30" rows="10"></textarea>
         <select name="category_id" id="">

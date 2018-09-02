@@ -17,6 +17,7 @@
     </style>
 </head>
 <body>
+    <div><a href="new-post.php">新增資料</a></div>
     <table>
     <?php while($row = mysqli_fetch_assoc($result)){ ?>
         <tr>
